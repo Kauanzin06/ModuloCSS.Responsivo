@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+img { 
+    max-width: 100%;
+    height: auto;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    max-width: 2350px;
+    padding: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(182, 23, 50);
+    border-bottom: 0.7em solid rgb(136, 17, 17)
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    position: relative;
+    font-size: 1.4em;
+    right: 2rem;
+}
+
+.menu  a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu > li > a:hover{
+    text-decoration: underline;
+    border-top: 6px solid rgb(0, 4, 255)   
+}
+
+.submenu a:hover{
+    text-decoration: underline;   
+}
+
+.menu li {
+    position: relative;
+    margin-right: 1.5rem;
+}
+
+.submenu li {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.submenu {
+    list-style: none;
+    position: absolute;
+    display: none; 
+    top: 100%;
+    background-color: rgb(0, 102, 128);
+    padding: 0.5rem;
+    min-width: 150px;
+    white-space: nowrap;
+}
+
+.menu li:hover .submenu{
+    display: block; 
+    border: 1px solid rgb(0, 102, 128)  
+}
+
+h2 {
+    font-size: 4rem;
+    padding: 2rem 5vw;
+    
+}
+.sobre {
+    background-color: rgb(70, 3, 3)
+}
+
+
+
+
+.sobreLoja p{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.sobreLoja img {
+    max-width: 45vw;
+    margin: 0  1.5rem;
+    padding-bottom: 1rem;
+}
+
+.produtos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0 3rem;
+}
+
+.motos img {
+    max-width: 100%;
+    padding: 1rem;
+}
+
+.motos h3{
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 1em;
+    font-size: 2rem;
+    color: rgb(0, 255, 213);
+}
+.motos p {
+font-size: 1.3rem;
+padding:0.5rem ;
+font-style: oblique;
+}
+
+.button{
+    display: flex;
+    padding: 1rem ;
+    width: 90%;
+    height: auto;
+    margin: 2rem;
+    border-radius: 1rem;
+    background-color: green;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.button:hover {
+    background-color: greenyellow;
+}
+
+.footer{
+    padding:3.6rem;
+    background-color: blue;
+}
+
+.footer  p {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+@media (max-width:1023px) {
+    .sobreLoja{
+        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+    .sobreLoja p{
+        font-size: 1rem;
+    }
+    .sobreLoja img {
+        max-width: 90%;
+    }
+    .produtos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:640px) {
+    .produtos {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        max-width: 90%;
+        
+    }
+}
