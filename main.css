@@ -11,9 +11,9 @@ img {
 }
 
 .header {
-    display: flex;
-    width: 100%;
-    max-width: 2350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    width: 100vw;
     padding: 2rem;
     justify-content: space-between;
     align-items: center;
@@ -82,14 +82,22 @@ h2 {
 
 
 
-.sobreLoja p{
-    font-size: 2.5rem;
+.sobreLoja p {
+    font-size: 2rem;
     font-weight: bold;
+    align-items: center;
+    display: flex;
+}
+
+.sobreLoja {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 
 .sobreLoja img {
-    max-width: 45vw;
-    margin: 0  1.5rem;
+    width: 95%;
+    margin: 0 1.5rem;
     padding-bottom: 1rem;
 }
 
@@ -112,8 +120,8 @@ h2 {
     color: rgb(0, 255, 213);
 }
 .motos p {
-font-size: 1.3rem;
-padding:0.5rem ;
+font-size: 1.5rem;
+padding:rem ;
 font-style: oblique;
 }
 
@@ -155,18 +163,35 @@ font-style: oblique;
         font-size: 1rem;
     }
     .sobreLoja img {
-        max-width: 90%;
+        max-width: 90vw;
     }
     .produtos {
         grid-template-columns: 1fr 1fr;
     }
 }
 
-@media (max-width:640px) {
+@media (max-width:639px) {
     .produtos {
         grid-template-columns: 1fr;
         flex-direction: column;
-        max-width: 90%;
         
+        
+    }
+
+    .sobreLoja {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    
+
+    .sobre h2 {
+        font-size: 1.5rem ;
+    }
+
+    .header {
+        gap: 1rem;
+        justify-content: space-between;
+        padding: 0.5rem;
     }
 }
